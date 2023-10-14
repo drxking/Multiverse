@@ -1,0 +1,551 @@
+@font-face {
+    font-family: shite;
+    src: url(../fonts/InterTight-Regular.ttf);
+}
+
+@font-face {
+    font-family: shite-bold;
+    src: url(../fonts/InterTight-Bold.ttf);
+}
+
+@font-face {
+    font-family: shite-two;
+    src: url(../fonts/SFNSCondensed-Semibold.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shite;
+}
+
+/* ::-webkit-scrollbar{
+    display: none;
+} */
+/* navigation bar */
+body {
+    background: #F0F0F0;
+    overflow-x: hidden;
+}
+
+.loadingscreen{
+    height: 100vh;
+    width: 100vw;
+    background: url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80);
+    position: relative;
+    backdrop-filter: brightness(100%);
+    position: absolute;
+    z-index: 5000000;
+}
+.loadingscreen h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 12vw;
+    font-family: shite-two;
+    color: #F0F0F0;
+    z-index: 2;
+}
+.loadingscreen span{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    font-size: 40vw;
+    opacity: 0.5;
+    font-family:shite-bold;
+    font-weight: 600;
+    color: #000;
+}
+
+#cursor {
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vw 4vw;
+    position: fixed;
+    width: 100vw;
+    z-index: 500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5vw;
+}
+#menu{
+    position: fixed;
+    height: 100vh;
+    right: -30%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    /* background-color: #000; */
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    z-index: 999;
+    flex-direction: column;
+    transition: 0.5s all;
+    color: #000;
+    /* border-left: 2px solid #000; */
+    box-shadow: -1px 0 0px #000;
+}
+
+#menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2vw;
+    width: 100%;
+    padding: 1vw 0;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2.2vw;
+    font-weight: 400    ;
+    text-transform: uppercase;
+    padding: 0 2vw;
+    letter-spacing: 1px;
+}
+#menu hr{
+    height: 2px;
+}
+#menu h1{
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-top: 2vw;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+}
+#menu p{
+    text-align: center;
+    font-size: 1vw;
+    text-shadow: 0.5px 0.5px 0 gray;
+}
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 2vw;
+}
+.close i{
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+/* section-1 */
+.section {
+    width: 100vw;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 33vw;
+    width: 100%;
+}
+
+.section-1 p {
+    font-size: 1.7vw;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.section-1 p span {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-1 p span::after {
+    content: url("../images/podcherkh.png");
+    position: absolute;
+    left: -20%;
+    top: 0;
+    transform: translateY(40%);
+    width: 50%;
+    height: 100%;
+}
+
+.section-1 h1 {
+    font-size: 18vw;
+    font-weight: 900;
+    font-family: shite-two;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    text-align: center;
+    margin-top: 4vw;
+}
+
+.section-1 .inner-section-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.inner-section-1 .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+}
+
+.pucket {
+    overflow: hidden;
+    border: 2px solid gray;
+    height: 4.4vw;
+    padding: 1vw 3vw;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.pucket p:last-child {
+    padding-top: 0.3vw;
+}
+
+.pucket p:first-child {
+    margin-bottom: 1.3vw;
+}
+
+.inner-section-index- {
+    width: 100%;
+    transform: translateY(-30%);
+    /* z-index: -1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+}
+
+.buddha {
+    height: 55vw;
+    width: 40vw;
+}
+
+.buddha video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.guesthouse {
+    height: 17.9vw;
+    width: 25vw;
+    position: absolute;
+    left: 9vw;
+    background: url(../images/uni.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.guesthouse p {
+    position: absolute;
+    bottom: -20%;
+    text-transform: uppercase;
+}
+
+.plane {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 15vw;
+    width: 17vw;
+    background: url(../images/uni3.png);
+    box-shadow: 0 0 3px gray;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-1 .cr {
+    text-align: right;
+    padding: 0 2vw;
+    font-size: 3vw;
+    width: 100%;
+}
+
+/* section-2 */
+
+.section-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-2 p {
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.section-2 h1 {
+    font-size: 12vw;
+    text-align: center;
+    font-family: shite-two;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    padding-top: 3vw;
+}
+
+.section-2 h1 span {
+    color: #a2b94f;
+    font-family: shite-two;
+}
+
+.section-2 p:last-child {
+    margin-bottom: 3vw;
+}
+
+/* section-3 */
+.section-3 {
+    overflow-x: hidden;
+}
+
+.slide {
+    display: flex;
+    align-items: start;
+    z-index: -1;
+}
+
+.image img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.slide .text {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4vw;
+    background: orange;
+    padding-right: 100vw;
+}
+
+.text h1 {
+    font-size: 30vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: shite-two;
+    color: #111;
+}
+
+
+/* section-4 */
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vw 0;
+
+}
+
+.section-4 p {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    white-space: nowrap;
+}
+
+.section-4 h1 {
+    font-size: 11vw;
+    line-height: 0.9;
+    text-align: center;
+    font-family: shite-two;
+}
+
+.section-4 h1 span {
+    font-family: shite-two;
+    color: #a2b94f;
+    text-shadow: 0 0 1px gray;
+}
+
+/* section-5 */
+
+.section-5 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #bcd65b;
+    padding: 4vw 0;
+}
+
+.section-5 p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-family: shite-two;
+    margin-bottom: 2vw;
+}
+
+.section-5 h1 a {
+    font-size: 20vw;
+    line-height: 0.7;
+    font-family: shite-two;
+    color: #111;
+    text-decoration: none;
+}
+
+.section-5 img {
+    height: 36vw;
+    width: 27vw;
+    transform: rotate(15deg);
+    object-fit: cover;
+}
+
+
+
+/* --------------- Responsive ------------ 550px */
+@media (max-width:694px) {
+    #menu{
+        width: 100%;
+        right: -100%;
+    }
+}
+@media (max-width:550px) {
+    ::-webkit-scrollbar{
+        display: none   ;
+    }
+    #menu ul li a{
+        font-size: 4vw;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .loadingscreen h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-transform: uppercase;
+        font-size: 17vw;
+        font-family: shite-two;
+    }
+    .loadingscreen span{
+        font-size: 50vw;
+    }
+    
+    .close i{
+        font-size: 4vw;
+    }
+    #cursor {
+        display: none;
+    }
+
+    nav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    nav ul {
+        gap: 6vw;
+    }
+
+    nav ul li a {
+        font-size: 4vw;
+    }
+
+    .section-1>p {
+        font-size: 2.7vw;
+        margin-top: 20vw;
+    }
+
+    .section-1 h1 {
+        font-size: 22vw;
+
+    }
+
+    .pucket {
+        border: 1px solid gray;
+    }
+
+    .section-2 h1 {
+        font-size: 15.7vw;
+        letter-spacing: 0px;
+        line-height: 0.95;
+    }
+
+    .section-2 p {
+        font-size: 3vw;
+        padding-bottom: 7vw;
+        padding-top: 2vw;
+    }
+
+
+    .text h1 {
+        font-size: 55vw;
+
+    }
+
+    .section-4 p {
+        font-size: 2.5vw;
+        padding-top: 9vw;
+    }
+
+    .section-4 h1 {
+        font-size: 15vw;
+        line-height: 1;
+        padding-bottom: 9vw;
+    }
+
+    .section-5 p {
+        font-size: 3.5vw;
+        padding-bottom: 4vw;
+        white-space: nowrap;
+    }
+
+    .section-5 h1 a {
+        font-size: 25vw;
+        line-height: 0.7;
+        font-family: shite-two;
+        color: #111;
+        text-decoration: none;
+    }
+
+    .section-5 img {
+        height: 65.52vw;
+        width: 49.14vw;
+        transform: rotate(15deg);
+        object-fit: cover;
+    }
+
+    .slide {
+        display: flex;
+        z-index: -1;
+        align-items: center;
+        height: 40vh;
+        overflow: hidden;
+    }
+
+    .slide img{
+        height: 100%;
+    }
+    .slide .text{
+        display: none;
+    }
+}

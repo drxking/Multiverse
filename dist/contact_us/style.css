@@ -1,0 +1,163 @@
+/* #map{
+    height: 300px;
+    width: 300px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#cursor{
+    height: 15px;
+    width: 15px;
+    pointer-events: none;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+.minov{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    position: absolute;
+}
+.overlay-1{
+    background: #000;
+    z-index: 5;
+}
+.overlay-2{
+    background-color:#222 ;
+    z-index: 4;
+}
+.overlay-3{
+    background-color: #444;
+    z-index: 3;
+}
+.overlay-4{
+    background-color: #666;
+    z-index: 2;
+}
+.overlay-5{
+    background-color:#888 ;
+    z-index: 1;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vw 4vw;
+    width: 100vw;
+    z-index: 500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5vw;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part-1 , .part-2{
+    height: 80vh;
+    width: 50%;
+}
+.part-1{
+    display: flex;
+    justify-content: end;
+    padding: 0 7vw;
+}
+.part-2 h1{
+    font-size:6vw ;
+    margin-bottom: 1vw;
+}
+.wrap{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    padding: 3vw 1vw 10vw 1vw;
+}
+.form{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 1.4vw;
+    margin-bottom: 4px;
+}
+form input, form textarea{
+    margin-bottom: 15px ;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 1.3vw;
+    background-color: #F0F0F0;
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+
+#submit{
+    padding: 0.79vw 5vw;
+    margin:2vw ;   
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.3vw;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+
+.info h2{
+    font-size: 2.2vw;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 3vw;
+}
+.info p{
+    font-size: 1.2vw;
+    color: rgb(82, 81, 81);
+    margin-bottom: 2vw;
+}
+
+
+
+
+@media (max-width:550px) {
+    nav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    nav ul {
+        gap: 6vw;
+    }
+
+    nav ul li a {
+        font-size: 4.5vw;
+    }
+
+}
